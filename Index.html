@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>New York Times Search</title>
+  <!-- Bootstrap CSS CDN  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+
+  <!-- Font Awesome CSS Icons (For cool glyphicons) -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+
+
+  <style>
+
+    h1 {
+      text-align: center;
+      background-color: #43658b;
+      color: white;
+      height: 100px;
+      padding-top: 25px;
+    }
+
+    h2{
+      background-color: #f1f3f8;
+      color:#393b44;
+      font-weight:bold;
+      font-size: 25px;
+      padding: 5px 5px 5px 5px;
+      margin-top: 5%;
+
+    }
+
+    .search-results {
+    }
+
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class ="row">
+      <header class ="col-md-12">
+        <h1>New York Times Search</h1>
+      </header>
+    </div>
+
+    <div class ="row">
+      <div class="col-md-12">
+        <form class="form">
+          <div class="row">
+            <section class="col-md-12">
+              <h2>Search Parameters</h2>
+            </section> 
+          </div>
+          <div class="mb-3">
+            <label for="Search Term" class="form-label">Search Term:</label>
+            <input type="text" class="form-control" id="searchTerm1" >
+            <div id="searchTerm2" class="form-text"></div>
+          </div>
+          <div class="mb-3">
+            <label for="Records" class="form-label">Number of Records to Retrieve:</label>
+            <input type="text" class="form-control" id="records1">
+          </div>
+          <div class="mb-3">
+            <label for="Start Year" class="form-label">Start Year (Optional):</label>
+            <input type="text" class="form-control" id="startYear1">
+          </div>
+          <div class="mb-3">
+            <label for="End Year" class="form-label">End Year (Optional):</label>
+            <input type="text" class="form-control" id="endYear1">
+          </div>
+        
+          <button type="search" class="btn btn-primary">Search</button>
+          <button type="clear" class="btn btn-primary">Clear Results</button>
+          </div>
+        </form>
+      </div>
+      
+      <div class="row">
+        <section class="col-md-12">
+          <h2>Top Articles</h2>
+        </section>
+        <div class="col-md-12 search-results" id="article-section">
+
+        </div>         
+      </div>
+
+    </div>
+  
+
+    
+
+  </div>
+
+  <footer class="footer fixed-bottom">
+    <p class="text-muted text-muted-footer text-center">&copy; Made with lots of love 🖤</p>
+  </footer>
+
+  <!-- jQuery JS -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+  <!-- Code to the JavaScript File -->
+  <script src="nytCode.js"></script>
+
+</body>
+
+</html>
