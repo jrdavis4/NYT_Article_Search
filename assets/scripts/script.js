@@ -2,6 +2,7 @@ var articleDiv = $("#article-section");
  
 function search () {
   
+  clear();
   //assign variables
   var startYear = "";
   var endYear = "";
@@ -10,7 +11,7 @@ function search () {
   //inputs
   var Query = $("#searchTerm1").val();
 
-  var count = parseInt($("#records1").val());
+  var count = parseInt($("#inlineFormCustomSelect").val());
 
   var inputStart = $("#startYear1").val().trim();
   if (inputStart) {
@@ -36,7 +37,7 @@ function search () {
       var title = response.response.docs[i].headline.main;
       var author = response.response.docs[i].byline.original;
       var newDiv = $("<div>").addClass("result");
-      var newTitle = $("<h3>").html("<span class='article-number'>" + (i+1) + "</span>" + title);
+      var newTitle = $("<h4>").html("<span class='article-number'>" + (i+1) + " </span>" + title);
       var newAuthor = $("<h6>").text(author);
       newDiv.append(newTitle, newAuthor);
 
